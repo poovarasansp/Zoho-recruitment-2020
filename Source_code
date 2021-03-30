@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+struct data{
+char name[50];
+char gender[10];
+char father[50];
+char mother[50];
+}*t;
+int main() {
+    struct data *d;
+  struct data *arr[5];
+  for(int i=0;i<5;i++){
+    scanf("%s",d->name);
+    scanf("%s",d->gender);
+    scanf("%s",d->father);
+    scanf("%s",d->mother);
+
+    arr[i]=d;
+  }
+  char person[50];
+  char dad[50],granddad[50],aunt[50];
+  scanf("%s",person);
+  for(int i=0;i<5;i++){
+    if(arr[i]->name[0]==person[0]){
+      dad=arr[i].father;
+      break;
+    }
+  }
+  for(int i=0;i<5;i++){
+    if(arr[i]->name[0]==dad[0]){
+      granddad=arr[i].father;
+      break;
+    }
+  }
+  for(int i=0;i<5;i++){
+    if(arr[i]->father[0]==grandad[0]){
+      aunt=arr[i].name;
+      break;
+    }
+  }
+  for(int i=0;i<5;i++){
+    if(arr[i]->mother[0]==aunt[0]){
+      printf("%s\n",arr[i].name);
+    }
+  }
+    return 0;
+}
